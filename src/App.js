@@ -5,9 +5,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Hello World
+        <div>
+          <h1>Hello World</h1>
+          <p>This site is under construction. In the meantime, please reach out to me at <a class="App-link" href="mailto:sam_swerczek@msn.com">sam_swerczek@msn.com</a>.</p>
+        </div>
       </header>
-      <p>This site is under construction. In the meantime, please reach out to me at sam_swerczek@msn.com.</p>
     </div>
   );
 }

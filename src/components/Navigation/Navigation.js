@@ -16,6 +16,11 @@ const Navigation = () => {
             Contact
           </Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/schedule">
+            Schedule
+          </Link>
+        </li>
       </ul>
     </nav>
   );

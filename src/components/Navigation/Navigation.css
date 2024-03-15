@@ -1,9 +1,0 @@
-a.nav-link {
-  color: black;
-  background-color: lightgrey;
-}
-
-a.nav-link.active {
-  text-decoration: underline;
-  background-color: gray;
-}

@@ -4,9 +4,9 @@ import {
   RouterProvider,
   Outlet,
 } from "react-router-dom";
-import Products from "./routes/Products";
+import About from "./routes/About";
 import Home from "./routes/Home";
-import Reports from "./routes/Reports";
+import Contact from "./routes/Contact";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import Amplify from "aws-amplify";
@@ -28,12 +28,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "products",
-        element: <Products />,
+        path: "about",
+        element: <About />,
       },
       {
-        path: "reports",
-        element: <Reports />,
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },

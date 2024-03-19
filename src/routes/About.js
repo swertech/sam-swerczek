@@ -2,7 +2,9 @@ function About() {
   return (
     <div className="about">
       <div className="cover">
-        <h2>ABOUT</h2>
+        <div className="inner-content header">
+          <h1>ABOUT</h1>
+        </div>
       </div>
       <div className="content-body">
         <div className="inner-content">

@@ -1,16 +1,50 @@
-import './App.css';
+import React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
+import About from "./routes/About";
+import Home from "./routes/Home";
+import Contact from "./routes/Contact";
+import Navbar from "./components/Navbar";
+import "./App.css";
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <h1>Hello World</h1>
-          <p>This site is under construction. In the meantime, please reach out to me at <a className="App-link" href="mailto:sammswerczek@gmail.com">sammswerczek@gmail.com</a>.</p>
-        </div>
-      </header>
-    </div>
-  );
+const AppLayout = () => (
+  <>
+    <Navbar />
+    <Outlet />
+    <Footer />
+  </>
+);
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
+  },
+]);
+
+const App = () => {
+  Amplify.configure(awsconfig);
+
+  return <RouterProvider router={router} />
 }
 
 export default App;

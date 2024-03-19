@@ -1,38 +1,267 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  color: #292828;
+}
+
+.cover {
+  background-color: #d6926b;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+}
+
+.cover > .cover-photo {
+    border: 5px solid white;
+    max-width: 800px;
+    width: 100%;
+}
+
+.cover {
+    padding: 40px 30px;
+}
+
+.cover h1 {
+  line-height: 1rem;
+  margin: auto;
+  padding: 30px 80px;
+  background-color: white;
+  max-width: 400px;
+}
+
+.content-body {
+    padding: 120px 30px;
+}
+
+.inner-content {
+    max-width: 960px;
+    margin: auto;
+}
+
+.inner-content.stretch {
+  max-width: 100%;
+}
+
+.content-body > .inner-content {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content-body > .inner-content > h1 {
+  margin-bottom: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.audio { 
+  background-color: #1f373b;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.audio h1 {
+  color: white; 
+}
+
+.bookings {
+  background-color: #eefd6d;
+}
+
+.button-container > a {
+  padding: 12px 20px;
+  margin: 8px;
+  border: 4px solid black;
+  color: black !important;
+  background-color: white;
+  transition: background-color 0.30s ease-out;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button-container > a:hover {
+  color: white !important;
+  background-color: black;
+  transition: background-color 0.30s ease-in;
+}
+
+.video {
+  background-color: #f5ccae;
+}
+
+.video-container {
+  margin-bottom: 50px;
+}
+
+.spotify-player {
+  border-radius: 12px;
+}
+
+.youtube-player {
+  width: 350px;
+  height: 250px;
+  border: 3px solid white;
+}
+
+.footer {
+  background-color: lightblue;
+  padding: 90px 30px;
+}
+
+.footer .socials {
+  padding-bottom: 16px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.footer .socials a {
+  font-size: 30px;
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+}
+
+.footer .socials a.facebook:hover {
+  background-color: #0866ff;
+}
+
+.footer .socials a.youtube:hover {
+  background-color: #f00;
+}
+
+.footer .socials a.spotify:hover {
+  background-color: #1ed760;
+}
+
+.footer .socials a.linkedin:hover {
+  background-color: #0a66c2;
+}
+
+.footer .socials a.github:hover {
+  background-color: #000000;
+}
+
+.footer .socials a:hover svg path {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footer a {
+  color: black;
+  padding: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navbar CSS */
+.navbar {
+  background-color: #ffffff;
+  height: 85px;
+  transition: height 0.15s ease-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Allura", cursive;
+  line-height: 1rem;
+}
+
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  transition: height 0.25s ease-in;
+}
+
+.navbar .navbar-title {
+  margin: auto;
+  padding-top: 4px;
+}
+
+.navbar .navbar-title span, .footer-title span {
+    font-family: "Allura", cursive;
+    font-size: 45px;
+    font-weight: 500;
+} 
+
+.menu-bars {
+  margin-left: 1rem;
+  font-size: 2rem;
+  background: none;
+  color: #000;
+  display: flex;
+}
+
+.nav-menu {
+  background-color: #ffffff;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.right {
+  left: auto;
+  right: -100%;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 450ms;
+  z-index: 1;
+  box-shadow: 2px 0 5px lightgray;
+}
+
+.nav-menu.right.active {
+  left: auto;
+  right: 0;
+  box-shadow: -2px 0 5px lightgray;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 0px 5px 10px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text span {
+    margin-left: 8px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #151414;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #000000;
+}
+
+.nav-text a:hover span, .nav-text a:hover svg path {
+  color: #fff;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #ffffff;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }

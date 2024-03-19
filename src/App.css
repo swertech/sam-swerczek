@@ -161,6 +161,7 @@
   align-items: center;
   font-family: "Allura", cursive;
   line-height: 1rem;
+  z-index: 1;
 }
 
 .navbar.sticky {

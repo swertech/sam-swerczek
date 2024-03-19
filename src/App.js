@@ -11,11 +11,13 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import Amplify from "aws-amplify";
 import awsconfig from "./aws-exports";
+import Footer from "./components/Footer";
 
 const AppLayout = () => (
   <>
     <Navbar />
     <Outlet />
+    <Footer />
   </>
 );
 

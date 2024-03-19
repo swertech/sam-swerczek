@@ -1,12 +1,15 @@
 function Contact() {
+  
   return (
     <div className="contact">
       <div className="cover">
-        <h2>CONTACT</h2>
+        <div className="inner-content header">
+          <h1>CONTACT</h1>
+        </div>
       </div>
       <div className="content-body">
         <div className="inner-content">
-          Some stuff...
+          TODO... for now, send me an email at sammswerczek@gmail.com. :)
         </div>
       </div>
     </div>

@@ -106,20 +106,49 @@
 
 .footer {
   background-color: lightblue;
+  padding: 90px 30px;
+}
+
+.footer .socials {
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer .socials a {
   font-size: 30px;
   padding: 16px;
   cursor: pointer;
+  display: flex;
 }
 
-.footer .socials a:hover {
+.footer .socials a.facebook:hover {
   background-color: #0866ff;
+}
+
+.footer .socials a.youtube:hover {
+  background-color: #f00;
+}
+
+.footer .socials a.spotify:hover {
+  background-color: #1ed760;
+}
+
+.footer .socials a.linkedin:hover {
+  background-color: #0a66c2;
+}
+
+.footer .socials a.github:hover {
+  background-color: #000000;
 }
 
 .footer .socials a:hover svg path {
   color: white;
+}
+
+.footer a {
+  color: black;
+  padding: 6px;
 }
 
 /* Navbar CSS */
@@ -236,7 +265,3 @@
   justify-content: flex-start;
   align-items: center;
 }
-
-/* span {
-  margin-left: 16px;
-} */

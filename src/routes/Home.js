@@ -14,8 +14,8 @@ function Home() {
         <div className="inner-content stretch">
           <h1>LET ME PLAY FOR YOU</h1>
           <div className="button-container">
-            <a>BOOK NOW</a>
-            <a>UPCOMING SHOWS</a>
+            <a href="/contact">BOOK NOW</a>
+            <a onClick={() => alert("soon... TM")}>UPCOMING SHOWS</a>
           </div>
         </div>
       </div>

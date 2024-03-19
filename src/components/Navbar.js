@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { RightSidebarData } from "./RightSideBar";
+import { RightSidebarData } from "../models/RightSideBar";
 import { IconContext } from "react-icons";
 import { DiAptana } from "react-icons/di";
-import { LeftSidebarData } from "./LeftSidebar";
+import { LeftSidebarData } from "../models/LeftSidebar";
 
 function Navbar() {
   const [leftSidebar, setLeftSidebar] = useState(false);

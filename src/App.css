@@ -8,6 +8,12 @@
   color: #292828;
 }
 
+@media (width < 600px)  {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
 .cover {
   background-color: #d6926b;
   color: #fff;
@@ -25,6 +31,12 @@
     padding: 40px 30px;
 }
 
+@media (width < 600px)  {
+  .cover {
+    padding: 40px 0px;
+  }
+}
+
 .cover h1 {
   line-height: 1rem;
   margin: auto;
@@ -35,6 +47,12 @@
 
 .content-body {
     padding: 120px 30px;
+}
+
+@media (width < 600px)  {
+  .content-body {
+    padding: 50px 20px;
+  }
 }
 
 .inner-content {
@@ -56,12 +74,14 @@
   letter-spacing: 2px;
 }
 
-.audio { 
-  background-color: #1f373b;
+@media (width < 600px)  {
+  .content-body > .inner-content > h1 {
+    margin-bottom: 30px;
+  }
 }
 
-.audio h1 {
-  color: white; 
+.audio { 
+  background-color: #8bafb5;
 }
 
 .bookings {
@@ -80,10 +100,27 @@
   text-decoration: none;
 }
 
+.dark-mode .button-container > a {
+  border: 4px solid white;
+  color: white !important;
+  background-color: inherit;
+}
+
+@media (width < 600px)  {
+  .button-container > a {
+    display: block;
+  }
+}
+
 .button-container > a:hover {
   color: white !important;
   background-color: black;
   transition: background-color 0.30s ease-in;
+}
+
+.dark-mode .button-container > a:hover {
+  color: #00343d !important;
+  background-color: white;
 }
 
 .video {
@@ -151,7 +188,6 @@
   padding: 6px;
 }
 
-/* Navbar CSS */
 .navbar {
   background-color: #ffffff;
   height: 85px;
@@ -183,8 +219,15 @@
     font-weight: 500;
 } 
 
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  color: #000;
+  display: flex;
+}
+
 .menu-bars {
-  margin-left: 1rem;
+  margin: 0 1rem;
   font-size: 2rem;
   background: none;
   color: #000;
@@ -193,7 +236,7 @@
 
 .nav-menu {
   background-color: #ffffff;
-  width: 250px;
+  width: 175px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -265,4 +308,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.navbar-toggle.right {
+  justify-content: flex-end;
+}
+
+.app-layout.dark-mode * {
+  color: white;
+  background-color: #00343d;
+}
+
+.app-layout.dark-mode .navbar, .app-layout.dark-mode .cover, .app-layout.dark-mode .content-body:not(.footer) {
+  border-bottom: solid white 2px;
 }

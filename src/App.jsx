@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,13 +11,22 @@ import Navbar from "./components/Navbar";
 import "./App.css";
 import Footer from "./components/Footer";
 
-const AppLayout = () => (
-  <>
-    <Navbar />
+const AppLayout = function() {
+  const [isDarkMode, setDarkMode] = useState(false);
+  
+  useEffect(() => {
+    const localStorageDarkMode = JSON.parse(localStorage.getItem('dark-mode'));
+    if (localStorageDarkMode) {
+      setDarkMode(true);
+    }
+  });
+
+  return (<div className={isDarkMode ? "app-layout dark-mode" : "app-layout"}>
+    <Navbar isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
     <Outlet />
     <Footer />
-  </>
-);
+  </div>)
+};
 
 const router = createBrowserRouter([
   {

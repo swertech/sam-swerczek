@@ -9,8 +9,6 @@ import Home from "./routes/Home";
 import Contact from "./routes/Contact";
 import Navbar from "./components/Navbar";
 import "./App.css";
-import Amplify from "aws-amplify";
-import awsconfig from "./aws-exports";
 import Footer from "./components/Footer";
 
 const AppLayout = () => (
@@ -42,8 +40,6 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  Amplify.configure(awsconfig);
-
   return <RouterProvider router={router} />
 }
 

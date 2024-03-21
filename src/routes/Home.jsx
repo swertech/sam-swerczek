@@ -1,3 +1,5 @@
+import React from "react";
+
 function Home() {
   return (
     <div className="home">
@@ -39,7 +41,7 @@ function Home() {
             </div>
           </div>
           <div className="button-container">
-            <a href="https://www.youtube.com/@samswerczek" target="_blank" rel="noreferrer">VIEW MORE</a>
+            <a href="https://www.youtube.com/@samswerczek" target="_blank" rel="noopener noreferrer">VIEW MORE</a>
           </div>
         </div>
       </div>

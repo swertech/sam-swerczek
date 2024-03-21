@@ -24,7 +24,7 @@
 .cover > .cover-photo {
     border: 5px solid white;
     max-width: 800px;
-    width: 100%;
+    width: 100%; 
 }
 
 .cover {

@@ -10,7 +10,7 @@ function About() {
       </div>
       <div className="content-body">
         <div className="inner-content">
-          Hi, I'm Sam!
+          Hi, I'm Sam!!
         </div>
       </div>
     </div>
